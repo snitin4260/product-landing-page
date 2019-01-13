@@ -4,6 +4,7 @@ let navbar = document.querySelector("#nav-bar");
 let closeIcon = document.querySelector("#nav-bar .close");
 let booksContainer = document.querySelector("#latest-books");
 let loader = document.querySelector(".loader_container");
+let body = document.querySelector("body");
 
 function createElem(elem, ...className) {
   let el = document.createElement(elem);
@@ -76,11 +77,14 @@ hamburger.addEventListener("click", function() {
   navbar.classList.add("open");
   //display close icon in navbar whose initial display was none
   closeIcon.classList.add("show");
+  //remove background scrolling when hamburger icon is clicked
+  body.classList.add("nav-open");
   hamburger.classList.add("hide");
 });
 
 closeIcon.addEventListener("click", function() {
   navbar.classList.remove("open");
+  body.classList.remove("nav-open");
   closeIcon.classList.remove("show");
   hamburger.classList.remove("hide");
 });

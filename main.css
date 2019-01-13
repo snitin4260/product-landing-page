@@ -91,6 +91,10 @@ nav {
   font-size: 3rem;
 }
 
+.nav-open {
+  overflow: hidden;
+}
+
 #nav-bar.open a {
   color: black;
 }
