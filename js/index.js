@@ -20,7 +20,7 @@ function createBookGrid(allBookLists) {
   //which has 5 books each
 
   let allLists = createElem("div", "all-lists");
-  for (let i = 0; i < allBookLists.length; i++) {
+  for (let i = 0; i < 4; i++) {
     let bookList = allBookLists[i]; //booklist is an object
 
     let list = createElem("div", "list");
@@ -41,15 +41,16 @@ function createBookGrid(allBookLists) {
       //book details
       listItem.insertAdjacentHTML(
         "afterbegin",
-        `
+        `<div class="list_item-left">
         <img src=${book.book_image} class="list_image" alt="${
           book.title
-        } image" >
-      <p class="list_title">${book.title}</p>
-      <p class="list_author">${book.author}</p>
-      <p class="list_description">${book.description}</p>
-      <p class="list_publisher">${book.publisher}</p>
-      <p class="list_isbn"> ${book.primary_isbn10}</p>
+        } image" ></div> 
+        <div class="list_item-right">
+          <p class="list_title">${book.title}</p>
+          <p class="list_author">by ${book.author}</p>
+          <p class="list_publisher">${book.publisher}</p>
+        </div>
+      
       `
       );
 
