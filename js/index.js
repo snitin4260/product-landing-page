@@ -5,12 +5,18 @@ let closeIcon = document.querySelector("#nav-bar .close");
 let booksContainer = document.querySelector("#latest-books");
 let loader = document.querySelector(".loader_container");
 
-function createElem(elem, className) {
+function createElem(elem, ...className) {
   let el = document.createElement(elem);
   if (className) {
-    el.classList.add(className);
+    if (className.length == 2) {
+      let [a, b] = className;
+      el.classList.add(a, b);
+    } else if (className.length == 1) {
+      el.classList.add(className);
+    } else {
+      throw new error("classname Array can only have 2 items in it");
+    }
   }
-
   return el;
 }
 
@@ -20,12 +26,15 @@ function createBookGrid(allBookLists) {
   //which has 5 books each
 
   let allLists = createElem("div", "all-lists");
+
+  //reducing lists to 4 , 16 is too large and
+  // will occupy 3 pages
   for (let i = 0; i < 4; i++) {
     let bookList = allBookLists[i]; //booklist is an object
 
     let list = createElem("div", "list");
 
-    let listName = createElem("h3", "list_name");
+    let listName = createElem("h3", "list_name", "t-center");
     //get list name say fiction from the list
     listName.textContent = bookList.list_name;
 
@@ -48,7 +57,6 @@ function createBookGrid(allBookLists) {
         <div class="list_item-right">
           <p class="list_title">${book.title}</p>
           <p class="list_author">by ${book.author}</p>
-          <p class="list_publisher">${book.publisher}</p>
         </div>
       
       `

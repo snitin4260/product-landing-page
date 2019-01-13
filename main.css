@@ -8,6 +8,10 @@
   --font-muli: "Muli", sans-serif;
 }
 
+.t-center {
+  text-align: center;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -125,9 +129,11 @@ nav {
 
 section h2:first-child {
   font-size: 2.5rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--header-bg-color);
   padding-bottom: 10px;
   font-weight: 400;
+  margin-bottom: 4rem;
+  color: var(--header-bg-color);
 }
 
 .features__container {
@@ -152,6 +158,43 @@ section h2:first-child {
   justify-content: center;
   padding: 15px;
   font-family: var(--font-muli);
+}
+
+@media (max-width: 528px) {
+  .features__container {
+    flex-direction: column;
+    border: 3px solid var(--header-bg-color);
+  }
+  .features__container img {
+    width: 100%;
+    height: 50%;
+  }
+  .features__para {
+    width: 100%;
+  }
+}
+
+@media (min-width: 798px) {
+  .features__container {
+    flex-direction: column;
+    border: 3px solid var(--header-bg-color);
+    float: left;
+    width: calc(45%);
+    margin-right: 5%;
+  }
+  .features__container img {
+    width: 100%;
+    height: 50%;
+  }
+  .features__para {
+    width: 100%;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
 
 .loader_container {
@@ -182,6 +225,10 @@ section h2:first-child {
   }
 }
 
+.list {
+  margin-bottom: 3rem;
+}
+
 .list_name {
   font-size: 2rem;
 }
@@ -190,7 +237,7 @@ section h2:first-child {
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   grid-auto-rows: 200px;
-  grid-gap: 10px;
+  grid-gap: 15px 20px;
   justify-content: center;
 }
 
@@ -206,14 +253,19 @@ section h2:first-child {
   flex-direction: row;
   border: 3px solid var(--header-bg-color);
   font-family: "Slabo 27px", serif;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.38);
 }
 
 .list_item p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .list_item-right {
   padding-left: 10px;
   padding-right: 2px;
+}
+
+p.list_author {
+  font-style: italic;
 }
 .list_title {
   font-weight: 900;
