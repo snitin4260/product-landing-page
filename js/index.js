@@ -79,14 +79,17 @@ hamburger.addEventListener("click", function() {
   closeIcon.classList.add("show");
   //remove background scrolling when hamburger icon is clicked
   body.classList.add("nav-open");
+  //hide hamburger icon
   hamburger.classList.add("hide");
 });
 
-closeIcon.addEventListener("click", function() {
-  navbar.classList.remove("open");
-  body.classList.remove("nav-open");
-  closeIcon.classList.remove("show");
-  hamburger.classList.remove("hide");
+navbar.addEventListener("click", function(e) {
+  if (e.target.matches("a") || e.target.matches("i.fa-times-circle")) {
+    navbar.classList.remove("open");
+    body.classList.remove("nav-open");
+    closeIcon.classList.remove("show");
+    hamburger.classList.remove("hide");
+  }
 });
 
 async function getResponseFromNYT() {
