@@ -362,11 +362,12 @@ p.list_author {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 200px;
+  height: 280px;
 }
 
 .form-container h3 {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 input[type="email"] {
