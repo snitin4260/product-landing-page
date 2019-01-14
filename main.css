@@ -395,3 +395,13 @@ input[type="email"] {
   margin-top: 2.5rem;
   font-size: 1.5rem;
 }
+
+/* footer style */
+#footer {
+  height: 100px;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
