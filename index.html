@@ -91,7 +91,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans|Muli|Slabo+27px"
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Muli|Slabo+27px|Lato"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./main.css" />
@@ -101,7 +101,9 @@
     <header id="header">
       <!-- centers inside header with a mzxwidth of 1000px -->
       <div class="header_container">
-        <div class="icon"><i class="fab fa-angrycreative"></i></div>
+        <div class="icon">
+          <a href="/"><i class="fab fa-angrycreative"></i></a>
+        </div>
         <!-- initial display of hamburger set to none, we are follwing a desktop first approach -->
         <div id="hamburger" class="hamburger"><i class="fas fa-bars"></i></div>
         <!-- navbar start -->
@@ -151,7 +153,23 @@
         <h2>Latest Books</h2>
         <div class="loader_container"><div class="loader"></div></div>
       </section>
-      <section id="pricing"><h2>Pricing</h2></section>
+      <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing_container">
+          <div class="pricing_item">
+            <div class="subscr-type">Monthly</div>
+            <div class="price">10$</div>
+            <div class="cancel-message">Cancel anytime</div>
+            <button class="price-button">Select</button>
+          </div>
+          <div class="pricing_item">
+            <div class="subscr-type">Yearly</div>
+            <div class="price">100$</div>
+            <div class="cancel-message">Cancel anytime</div>
+            <button class="price-button">Select</button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./js/index.js"></script>
   </body>

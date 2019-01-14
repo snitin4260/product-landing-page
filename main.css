@@ -6,6 +6,7 @@
   --font-open-sans: "Open Sans", sans-serif;
   font-size: 62.5%;
   --font-muli: "Muli", sans-serif;
+  --font-lato: "Lato", sans-serif;
 }
 
 .t-center {
@@ -49,6 +50,11 @@ header {
 .icon {
   font-size: 60px;
   padding-left: 10px;
+}
+
+.icon a {
+  text-decoration: none;
+  color: white;
 }
 
 .hamburger {
@@ -199,7 +205,7 @@ section h2:first-child {
     display: table;
   }
 }
-
+/* loader animation */
 .loader_container {
   display: flex;
   justify-content: center;
@@ -227,7 +233,7 @@ section h2:first-child {
     transform: rotate(360deg);
   }
 }
-
+/* bookslist style */
 .list {
   margin-bottom: 3rem;
 }
@@ -254,7 +260,6 @@ section h2:first-child {
 .list_item {
   display: flex;
   flex-direction: row;
-  border: 3px solid var(--header-bg-color);
   font-family: "Slabo 27px", serif;
   box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.38);
 }
@@ -272,4 +277,60 @@ p.list_author {
 }
 .list_title {
   font-weight: 900;
+}
+
+/* pricing */
+
+.pricing_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pricing_item {
+  height: 300px;
+  max-width: 250px;
+  width: 100%;
+  padding: 2px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 2px solid var(--header-bg-color);
+  margin-right: 5%;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.38);
+}
+
+@media (max-width: 610px) {
+  .pricing_item {
+    margin: 0;
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+}
+
+.pricing_item .subscr-type {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--header-bg-color);
+}
+.pricing_item .price {
+  font-size: 5rem;
+  font-family: var(--font-lato);
+  font-weight: 100;
+}
+
+.pricing_item .cancel-message {
+  font-size: 1.5rem;
+}
+
+.price-button {
+  padding: 15px 15px;
+  background-color: var(--header-bg-color);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  width: 150px;
+  border-radius: 100px;
+  border: 0;
+  color: white;
+  cursor: pointer;
 }
