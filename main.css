@@ -52,6 +52,10 @@ header {
   padding-left: 10px;
 }
 
+#nav-bar.open .icon {
+  font-size: 3.8rem;
+}
+
 .icon a {
   text-decoration: none;
   color: white;
@@ -93,7 +97,7 @@ nav {
   right: 0;
   z-index: 200;
   border: 4px dashed var(--header-bg-color);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .nav-open {
